@@ -18,7 +18,9 @@ seat * {
   xcursor_theme volantes_cursors 24
 }
 
+output eDP-1 position 1920 0
 output eDP-1 bg /home/jee/Wallpaper/gruvbox-bw-4.png fill
+output HDMI-A-1 position 0 0
 output HDMI-A-1 bg /home/jee/Wallpaper/gruvbox-bw-3.png fill
 
 for_window [app_id="pavucontrol"] floating enable
