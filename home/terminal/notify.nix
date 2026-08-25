@@ -16,7 +16,7 @@ in {
       height = 120;
       margin = 10;
       padding = 15;
-      anchor = "top-right";
+      anchor = "top-center";
       layer = "overlay";
 
       # Optional extras
