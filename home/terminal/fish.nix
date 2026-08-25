@@ -33,32 +33,29 @@
       set -U fish_greeting
     '';
     functions.rm = {
+      description = "Require sudo authentication before rm -rf";
       body = ''
         if status is-command-substitution
           command rm $argv
           return
         end
 
-        set need_confirm 0
-        set has_target 0
+        set need_sudo 0
         for arg in $argv
-          if string match -qr -- '^-' $arg
-            if string match -qr -- '[rR]' $arg; and string match -qr -- 'f' $arg
-              set need_confirm 1
-            end
-          else
-            set has_target 1
-            if test "$arg" = "/" -o "$arg" = "~" -o "$arg" = "$HOME"
-              echo "Refusing to rm -rf critical path: $arg"
-              return 1
-            end
+          if string match -qr -- "-.*[rf].*" $arg
+            set need_sudo 1
+            break
           end
         end
 
-        if test $need_confirm -eq 1 -a $has_target -eq 1
-          read -P "Really rm -rf $argv? [y/N] " -n confirm
-          if test "$confirm" != "y"
-            echo "Aborted."
+        if test $need_sudo -eq 1
+          echo "Authentication required for rm -rf"
+          sudo -v || return 1
+        end
+
+        for target in $argv
+          if test "$target" = "/" -o "$target" = "~" -o "$target" = "$HOME"
+            echo "Refusing to rm -rf critical path: $target"
             return 1
           end
         end
