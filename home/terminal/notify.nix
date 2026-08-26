@@ -9,17 +9,16 @@ in {
       text-color = settings.color.foreground;
       border-color = settings.color.primary;
       progress-color = settings.color.primary;
-      border-size = 2;
-      default-timeout = 5000;
       font = "JetBrainsMono Nerd Font 10";
+      default-timeout = 5000;
+      border-size = 0;
       width = 350;
       height = 120;
-      margin = 10;
-      padding = 15;
+      margin = 0;
+      padding = 10;
       anchor = "top-center";
       layer = "overlay";
 
-      # Optional extras
       icons = true;
       markup = true;
       group-by = "app-name";
