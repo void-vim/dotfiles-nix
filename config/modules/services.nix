@@ -30,4 +30,46 @@
       STOP_CHARGE_THRESH_BAT0 = 80;
     };
   };
+  services.searx = {
+    enable = true;
+    package = pkgs.searxng;
+
+    settings = {
+      server = {
+        port = 8080;
+        bind_address = "127.0.0.1";
+        # Set to true to allow raw curl queries to return JSON
+        secret_key = "generate_a_random_string_here";
+      };
+
+      search = {
+        safe_search = 0;
+        autocomplete = "";
+        formats = ["html" "json"];
+      };
+
+      engines = [
+        {
+          name = "duckduckgo";
+          engine = "duckduckgo";
+          disabled = false;
+        }
+        {
+          name = "google";
+          engine = "google";
+          disabled = false;
+        }
+        {
+          name = "brave";
+          engine = "brave";
+          disabled = false;
+        }
+        {
+          name = "bing";
+          engine = "bing";
+          disabled = false;
+        }
+      ];
+    };
+  };
 }
