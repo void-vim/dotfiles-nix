@@ -6,7 +6,7 @@
     <title>Gruvbox Start Page</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,12 +75,14 @@
       .gmail { border-top: 3px solid var(--yellow); }
       .whatsapp { border-top: 3px solid var(--green); }
       .proton { border-top: 3px solid var(--purple); }
+      .twitter { border-top: 3px solid var(--blue); }
 
       .github:hover  { color: var(--fg-color); }
       .gmail:hover   { color: var(--yellow); }
       .proton:hover  { color: var(--purple); }
       .youtube:hover  { color: var(--red); }
       .whatsapp:hover  { color: var(--green); }
+      .twitter:hover  { color: var(--blue); }
     </style>
   </head>
 
@@ -114,6 +116,11 @@
           <div>WhatsApp</div>
         </a>
 
+        <a href="https://x.com" class="social-item twitter">
+          <i class="fab fa-x-twitter"></i>
+          <div>X</div>
+        </a>
+
       </div>
     </div>
 
@@ -129,6 +136,7 @@
             gm: "https://mail.google.com",
             pr: "https://mail.proton.me",
             wa: "https://web.whatsapp.com/",
+            tw: "https://x.com",
           };
 
           window.location.href =
