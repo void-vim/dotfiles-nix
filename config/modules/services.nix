@@ -20,7 +20,7 @@
   };
   services.dbus.packages = with pkgs; [
     dconf
-    gcr
+    gcr_4
   ];
   services.blueman.enable = true;
   services.tlp = {

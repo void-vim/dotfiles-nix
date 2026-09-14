@@ -8,14 +8,6 @@ in {
   programs.rofi = {
     enable = true;
     package = pkgs.rofi;
-    pass = {
-      enable = true;
-      package = pkgs.rofi-pass-wayland;
-      extraConfig = ''
-        backend=wtype
-        clipboard_backend=wl-clipboard
-      '';
-    };
     font = "Fira Mono 10";
     theme = let
       inherit (config.lib.formats.rasi) mkLiteral;
