@@ -6,8 +6,21 @@ export default function (pi: ExtensionAPI) {
     const history = ctx.session?.messages || [];
     const lastMessage = history[history.length - 1];
 
+    if (lastMessage && lastMessage.role === "assistant") {
+      const text = lastMessage.content || "";
+      
+      if (text.includes("Rate limit exceeded") || text.includes("Provider returned error")) {
+        execFile("notify-send", [
+          "--urgency=critical",
+          "Pi Agent Error",
+          "Rate limit hit or provider error occurred.",
+        ]);
+        return;
+      }
+    }
+
     let title = "Pi Agent";
-    let message = "Task completed successfully.";
+    let message = "Ur shit is done";
     let urgency = "normal";
 
     if (lastMessage && lastMessage.role === "assistant") {

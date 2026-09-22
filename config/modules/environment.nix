@@ -91,6 +91,7 @@
     python3
     nodejs_22
     pnpm
+    bun
     typescript
     typescript-language-server
     lua-language-server
