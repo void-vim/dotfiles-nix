@@ -10,6 +10,7 @@ with pkgs; [
   brave
   telegram-desktop
   discord-ptb
+  wireshark
   # xautoclick
   # localsend
 ]
