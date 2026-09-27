@@ -18,7 +18,7 @@ seat * {
   xcursor_theme volantes_cursors 24
 }
 
-output eDP-1 bg /home/jee/Wallpaper/gruvbox-bw-4.png fill
+output eDP-1 bg /home/jee/Wallpaper/manga-berserk.png fill
 output eDP-1 position 0 0
 output HDMI-A-1 position 1920 0
 output HDMI-A-1 bg /home/jee/Wallpaper/gruvbox-bw-3.png fill
