@@ -17,7 +17,6 @@
   "packages": [
     "npm:pi-kilocode",
     "npm:pi-mcp-adapter",
-    "npm:pi-system-one",
     "npm:pi-diet-memory"
   ],
   "extensions": [

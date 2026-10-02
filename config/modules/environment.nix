@@ -81,6 +81,7 @@
     v4l-utils # virtual camera support
     bluetui
     jq
+    yt-dlp
 
     # Audio Management
     pavucontrol # gui
