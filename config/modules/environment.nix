@@ -98,6 +98,8 @@
     lua-language-server
     astro-language-server
     vue-language-server
+    # flutter # sdk, bundles its own dart
+    # dart # dart cli + dart language-server for lsp
     # docker-compose
     nixd # nix lang server
     alejandra # nix formatter
