@@ -11,6 +11,14 @@ with pkgs; [
   telegram-desktop
   discord-ptb
   wireshark
+  tcpdump
+  nmap
+  dig
+  bettercap
+  netcat
+  reaverwps-t6x
+  iw
+  aircrack-ng
   # xautoclick
   # localsend
 ]
