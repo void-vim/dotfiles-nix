@@ -1,5 +1,4 @@
-{inputs, ...}: let
-in {
+{
   imports = [
     ./host.nix
   ];

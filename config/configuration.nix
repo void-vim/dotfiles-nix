@@ -1,15 +1,7 @@
 {...}: {
   imports = [
     ./hardware-configuration.nix
-    ./modules/home-manager.nix
-    ./modules/networking.nix
-    ./modules/users.nix
-    ./modules/fonts.nix
-    ./modules/environment.nix
-    ./modules/services.nix
-    ./modules/virtualisation.nix
-    ./modules/pm2.nix
-    ./modules/graphics.nix
+    ./modules
   ];
 
   nixpkgs.config.allowUnfree = true;

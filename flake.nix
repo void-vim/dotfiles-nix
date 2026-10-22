@@ -8,8 +8,6 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # River 0.3.x is provided by pkgs.river-classic (maintained fork) from the
-    # main nixpkgs above, built against the system mesa. No separate pin needed.
   };
   outputs = {
     nixpkgs,
