@@ -1,9 +1,5 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
-  sett = import ../settings.nix;
+let
+  sett = import ../../settings.nix;
 in {
   programs.qutebrowser = {
     enable = true;
