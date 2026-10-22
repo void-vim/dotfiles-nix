@@ -4,26 +4,24 @@
     shellAliases = {
       v = "nvim";
       nb = "sudo nixos-rebuild switch --flake .#jee";
+      nf = "nix flake update";
       lsbig = "du -ah ./ | sort -rh | head -n 20";
 
-      ga = "git add $1";
-      gc = "git commit -m $1";
       gac = "git add . && git commit -m $1";
+      gacp = "git add . && git commit -m $1 && git push";
       gs = "git status --short";
       gl = "git log --oneline --graph --decorate";
       gck = "git checkout $1";
       grs = "git remote set-url origin $1";
-      gps = "git push origin $2";
+      gps = "git push origin $1";
       gpl = "git pull origin $1";
 
       nrd = "npm run dev";
       nrs = "npm run start";
       nrb = "npm run build";
-      nrf = "npm run format";
       prd = "pnpm run dev";
       prs = "pnpm run start";
       prb = "pnpm run build";
-      prf = "pnpm run format";
 
       zrb = "zig run build";
       zr = "zig run";
