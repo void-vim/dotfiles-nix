@@ -8,7 +8,6 @@ in {
   programs.rofi = {
     enable = true;
     package = pkgs.rofi;
-    font = "Fira Mono 10";
     theme = let
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
@@ -116,18 +115,21 @@ in {
         text-color = mkLiteral "@foreground";
       };
     };
-    extraConfig = {
-      # show-icons = true;
-      terminal = "kitty";
-      modi = "drun,run,window,filebrowser";
-      show-icons = false;
-      display-drun = "󰀻 ";
-      display-run = "󰆍 ";
-      display-window = " ";
-      display-filebrowser = " ";
-      display-power = "󰐥 ";
-      drun-display-format = "{name}";
-      window-format = "{w} · {c} · {t}";
+    settings = {
+      font = "Fira Mono 10";
+      extraConfig = {
+        # show-icons = true;
+        terminal = "kitty";
+        modi = "drun,run,window,filebrowser";
+        show-icons = false;
+        display-drun = "󰀻 ";
+        display-run = "󰆍 ";
+        display-window = " ";
+        display-filebrowser = " ";
+        display-power = "󰐥 ";
+        drun-display-format = "{name}";
+        window-format = "{w} · {c} · {t}";
+      };
     };
   };
 }
