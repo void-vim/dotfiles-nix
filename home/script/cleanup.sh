@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-# Ultimate NixOS Storage Optimizer
-
 echo "[INFO] Removing old user generations..."
 nix-env --delete-generations old
 

@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-
-# Options
 options="Shutdown\nReboot\nSuspend\nLogout"
 
 # Rofi Command

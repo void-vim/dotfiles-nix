@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # usage: ./brightness.sh up|down
 
 case "$1" in

@@ -1,5 +1,3 @@
-#!/bin/sh
-
 items=""
 tree_json=$(swaymsg -t get_tree)
 

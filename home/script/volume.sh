@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # usage: ./volume.sh up|down|mute
 
 # change volume

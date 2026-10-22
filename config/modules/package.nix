@@ -5,13 +5,13 @@
 }: {
   environment.systemPackages = with pkgs; [
     #  Global bash script
-    (writeScriptBin "nix-clean" (builtins.readFile ../../home/script/cleanup.sh))
-    (writeScriptBin "nix-clean-node" (builtins.readFile ../../home/script/cleanup-node.sh))
-    (writeScriptBin "powermenu" (builtins.readFile ../../home/script/powermenu.sh))
-    (writeScriptBin "volume" (builtins.readFile ../../home/script/volume.sh))
-    (writeScriptBin "brightness" (builtins.readFile ../../home/script/brightness.sh))
-    (writeScriptBin "screenshots" (builtins.readFile ../../home/script/screenshots.sh))
-    (writeScriptBin "workspace" (builtins.readFile ../../home/script/workspace.sh))
+    (writeShellScriptBin "nix-clean" (builtins.readFile ../../home/script/cleanup.sh))
+    (writeShellScriptBin "nix-clean-node" (builtins.readFile ../../home/script/cleanup-node.sh))
+    (writeShellScriptBin "powermenu" (builtins.readFile ../../home/script/powermenu.sh))
+    (writeShellScriptBin "volume" (builtins.readFile ../../home/script/volume.sh))
+    (writeShellScriptBin "brightness" (builtins.readFile ../../home/script/brightness.sh))
+    (writeShellScriptBin "screenshots" (builtins.readFile ../../home/script/screenshots.sh))
+    (writeShellScriptBin "workspace" (builtins.readFile ../../home/script/workspace.sh))
 
     # CLI Utilities
     cron
@@ -59,8 +59,8 @@
     lua-language-server
     astro-language-server
     vue-language-server
-    # flutter 
-    # dart 
+    # flutter
+    # dart
     # docker-compose
     nixd # nix lang server
     alejandra # nix formatter

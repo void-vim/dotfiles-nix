@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 choice=$(printf "Output (file)\nRegion (file)\nRegion (clipboard)\n" | rofi -dmenu -p "󰩭  :")
 
 mkdir -p "$HOME/Screenshots"
