@@ -3,7 +3,7 @@
     hostName = "Nix";
     nameservers = ["127.0.0.1"];
     firewall = {
-      enable = false;
+      enable = true;
       allowPing = false;
     };
     networkmanager = {

@@ -30,7 +30,7 @@
     };
   };
   services.searx = {
-    enable = true;
+    enable = false;
     package = pkgs.searxng;
 
     settings = {
