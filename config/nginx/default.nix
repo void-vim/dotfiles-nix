@@ -1,12 +1,10 @@
 {inputs, ...}: let
-  secrets = import inputs.secrets;
 in {
   imports = [
     ./host.nix
   ];
   security.acme = {
     acceptTerms = true;
-    defaults.email = secrets.email;
   };
   services.nginx = {
     enable = true;
