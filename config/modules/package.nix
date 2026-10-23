@@ -5,8 +5,8 @@
 }: {
   environment.systemPackages = with pkgs; [
     #  Global bash script
-    (writeShellScriptBin "nix-clean" (builtins.readFile ../../home/script/cleanup.sh))
-    (writeShellScriptBin "nix-clean-node" (builtins.readFile ../../home/script/cleanup-node.sh))
+    (writeShellScriptBin "cleanup-nix" (builtins.readFile ../../home/script/cleanup-nix.sh))
+    (writeShellScriptBin "cleanup-node" (builtins.readFile ../../home/script/cleanup-node.sh))
     (writeShellScriptBin "powermenu" (builtins.readFile ../../home/script/powermenu.sh))
     (writeShellScriptBin "volume" (builtins.readFile ../../home/script/volume.sh))
     (writeShellScriptBin "brightness" (builtins.readFile ../../home/script/brightness.sh))
@@ -64,7 +64,7 @@
     # docker-compose
     nixd # nix lang server
     alejandra # nix formatter
-    inputs.zig.packages.${pkgs.stdenv.hostPlatform.system}.master
-    inputs.zls.packages.${pkgs.stdenv.hostPlatform.system}.default
+    zig
+    zls
   ];
 }
