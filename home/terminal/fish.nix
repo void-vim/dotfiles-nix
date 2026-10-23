@@ -8,7 +8,6 @@
       lsbig = "du -ah ./ | sort -rh | head -n 20";
 
       gac = "git add . && git commit -m $1";
-      gacp = "git add . && git commit -m $1 && git push";
       gs = "git status --short";
       gl = "git log --oneline --graph --decorate";
       gck = "git checkout $1";

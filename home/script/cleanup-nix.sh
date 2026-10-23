@@ -13,5 +13,8 @@ sudo nix-store --optimize
 echo "[INFO] Vacum logs journalctl"
 sudo journalctl --vacuum-time=2d
 
+echo "[INFO] Clean npm and pnpm cache"
+npm cache clean --force && pnpm cache prune
+
 echo "[INFO] Current Disk Usage of /nix:"
 df -h /nix
