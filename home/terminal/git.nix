@@ -19,6 +19,7 @@ in {
       "*.cache"
       "*result*"
       "**dist"
+      "*output*"
       "**.cache"
       ".cache"
       "dist"
