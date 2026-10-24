@@ -7,6 +7,7 @@
       nf = "nix flake update";
       lsbig = "du -ah ./ | sort -rh | head -n 20";
 
+      ga = "git add $1";
       gac = "git add . && git commit -m $1";
       gs = "git status --short";
       gl = "git log --oneline --graph --decorate";

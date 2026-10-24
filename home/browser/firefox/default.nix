@@ -7,14 +7,6 @@
     enable = true;
     languagePacks = ["en-US"];
 
-    # preferences = {
-    #   "browser.startup.homepage" = "../blank-page.html";
-    #   "browser.search.region" = "US";
-    #   "browser.uidensity" = "1";
-    #   "sidebar.verticalTabs" = true;
-    #   "sidebar.main.tools" = "bookmarks";
-    # };
-
     policies = {
       AppAutoUpdate = false;
       BackgroundAppUpdate = false;
