@@ -9,7 +9,6 @@ with pkgs; [
   obs-studio
   brave
   telegram-desktop
-  discord-ptb
   wireshark
   tcpdump
   nmap

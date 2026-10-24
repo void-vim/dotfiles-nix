@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }: {
   environment.systemPackages = with pkgs; [
@@ -15,6 +14,7 @@
 
     # CLI Utilities
     cron
+    gcc
     ripgrep
     nh
     wget
@@ -54,6 +54,7 @@
     nodejs_22
     pnpm
     bun
+    tree-sitter
     typescript
     typescript-language-server
     lua-language-server

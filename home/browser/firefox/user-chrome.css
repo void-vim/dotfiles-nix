@@ -1,0 +1,46 @@
+/* --- Gruvbox Dark Theme for Firefox UI --- */
+:root {
+  --in-content-bg-color: #282828 !important;
+  --in-content-page-background: #282828 !important;
+  --toolbar-bgcolor: #282828 !important;
+  --toolbar-color: #ebdbb2 !important;
+  --tab-selected-bgcolor: #3c3836 !important;
+  --tab-selected-color: #ebdbb2 !important;
+  --lwt-accent-color: #1d2021 !important;
+  --lwt-text-color: #ebdbb2 !important;
+}
+
+/* Global Background and Nav Bar */
+#navigator-toolbox {
+  background-color: #282828 !important;
+  color: #ebdbb2 !important;
+  border-bottom: 1px solid #3c3836 !important;
+}
+
+/* URL Bar styling */
+#urlbar-background {
+  background-color: #3c3836 !important;
+  border: 1px solid #504945 !important;
+}
+
+#urlbar-input {
+  color: #ebdbb2 !important;
+}
+
+/* Tabs */
+.tab-background[selected="true"] {
+  background-color: #3c3836 !important;
+}
+
+.tab-background:not([selected="true"]) {
+  background-color: #282828 !important;
+}
+
+.tab-text {
+  color: #ebdbb2 !important;
+}
+
+/* Bookmarks Toolbar */
+#personal-bookmarks {
+  background-color: #282828 !important;
+}

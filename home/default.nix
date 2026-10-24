@@ -5,7 +5,7 @@ in {
   imports = [
     ./sway
     ./terminal
-    ./browser/qutebrowser
+    ./browser
     ./rofi
     ./theme.nix
   ];
