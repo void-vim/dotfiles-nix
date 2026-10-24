@@ -1,11 +1,19 @@
-{pkgs, ...}: {
+{...}: {
+  imports = [
+    ./tridactyl.nix
+    ./styling.nix
+  ];
   programs.firefox = {
-    imports = [
-      ./tridactyl.nix
-      ./styling.nix
-    ];
     enable = true;
     languagePacks = ["en-US"];
+
+    # preferences = {
+    #   "browser.startup.homepage" = "../blank-page.html";
+    #   "browser.search.region" = "US";
+    #   "browser.uidensity" = "1";
+    #   "sidebar.verticalTabs" = true;
+    #   "sidebar.main.tools" = "bookmarks";
+    # };
 
     policies = {
       AppAutoUpdate = false;
@@ -50,73 +58,9 @@
         };
 
         "tridactyl.vim@cmcaine.co.uk" = {
-          install_url = moz "tridactyl";
+          install_url = moz "tridactyl-vim";
           installation_mode = "force_installed";
           updates_disabled = true;
-        };
-      };
-    };
-
-    # Search engine definitions (keeping your exact setup)
-    profiles.default = {
-      search = {
-        force = true;
-        default = "DuckDuckGo";
-        privateDefault = "DuckDuckGo";
-        engines = {
-          "Nix Packages" = {
-            urls = [
-              {
-                template = "https://search.nixos.org/packages";
-                params = [
-                  {
-                    name = "channel";
-                    value = "unstable";
-                  }
-                  {
-                    name = "query";
-                    value = "{searchTerms}";
-                  }
-                ];
-              }
-            ];
-            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = ["@np"];
-          };
-          "Nix Options" = {
-            urls = [
-              {
-                template = "https://search.nixos.org/options";
-                params = [
-                  {
-                    name = "channel";
-                    value = "unstable";
-                  }
-                  {
-                    name = "query";
-                    value = "{searchTerms}";
-                  }
-                ];
-              }
-            ];
-            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = ["@no"];
-          };
-          "NixOS Wiki" = {
-            urls = [
-              {
-                template = "https://wiki.nixos.org/w/index.php";
-                params = [
-                  {
-                    name = "search";
-                    value = "{searchTerms}";
-                  }
-                ];
-              }
-            ];
-            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = ["@nw"];
-          };
         };
       };
     };

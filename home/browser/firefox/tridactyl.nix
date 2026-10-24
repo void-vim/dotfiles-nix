@@ -10,6 +10,12 @@
     bind J tabnext
     bind K tabprev
 
+   " Page Jumping & History Navigation
+    bind gg scrolltop
+    bind G scrollbottom
+    bind H gobrief
+    bind L goforward
+
     " Hint characters optimized for home row
     set hintchars a s d f g h j k l
 

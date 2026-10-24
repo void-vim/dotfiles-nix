@@ -27,6 +27,14 @@
   color: #ebdbb2 !important;
 }
 
+/* Move the sidebar / vertical tabs to the right side */
+#sidebar-box {
+  order: 2 !important;
+}
+#sidebar-splitter {
+  order: 3 !important;
+}
+
 /* Tabs */
 .tab-background[selected="true"] {
   background-color: #3c3836 !important;
