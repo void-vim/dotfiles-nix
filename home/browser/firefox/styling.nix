@@ -19,6 +19,8 @@
     };
     settings = {
       "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+      "browser.urlbar.placeholderName" = "DuckDuckGo";
+      "browser.urlbar.placeholderName.private" = "DuckDuckGo";
       "browser.startup.homepage" = "chrome://browser/content/blanktab.html";
       "browser.search.region" = "US";
       "browser.uidensity" = "1";

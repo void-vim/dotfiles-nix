@@ -4,8 +4,8 @@
   xdg.configFile."tridactyl/tridactylrc".text = ''
     bind j scrollline 20
     bind k scrollline -20
-    bind J tabnext
-    bind K tabprev
+    bind J tabprev
+    bind K tabnext
 
     bind H gobrief
     bind L goforward
