@@ -4,8 +4,8 @@ set $term kitty
 font pango:Fira Mono 10
 default_border pixel 0
 default_floating_border pixel 0
-gaps inner 5
-gaps outer 5
+gaps inner 0
+gaps outer 0
 floating_modifier $mod normal
 
 input * {
@@ -17,11 +17,6 @@ input * {
 seat * {
   xcursor_theme volantes_cursors 24
 }
-
-output eDP-1 bg /home/jee/Wallpaper/manga-berserk.png fill
-output eDP-1 position 0 0
-output HDMI-A-1 position 1920 0
-output HDMI-A-1 bg /home/jee/Wallpaper/gruvbox-bw-3.png fill
 
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="mpv"] floating enable
@@ -64,9 +59,7 @@ bindsym $mod+0 workspace number 10
 bindsym $mod+t workspace back_and_forth
 
 exec mako
-exec kitty
+exec swaymsg "workspace number 1; exec kitty"
+exec swaymsg "workspace number 2; exec firefox"
 
-# import compositor env (WAYLAND_DISPLAY) into systemd user manager so the
-# xdg-desktop-portal GTK backend can open a display and serve file pickers /
-# download dialogs (otherwise it dies with "cannot open display")
 exec "systemctl --user import-environment; systemctl --user restart xdg-desktop-portal.service"
